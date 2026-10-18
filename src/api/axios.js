@@ -1,5 +1,5 @@
 import axios from "axios";
-
+// Create an instance of axios with the base URL and default headers
 const api = axios.create({
   baseURL: "https://test-backend.abdulrahman-hares.com/api",
   headers: {
