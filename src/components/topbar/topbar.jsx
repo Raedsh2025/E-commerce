@@ -1,4 +1,15 @@
+import { useNavigate } from "react-router-dom";
+import { removeToken } from "../../utils/token-storage";
+
 function Topbar() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    removeToken();
+    localStorage.removeItem("user");
+    navigate("/login", { replace: true });
+  };
+
   return (
     <header className="flex min-h-[84px] shrink-0 items-center justify-between gap-5 border-b border-black/5 bg-white px-8">
       <div>
@@ -25,6 +36,14 @@ function Topbar() {
             Student Project
           </small>
         </div>
+
+        <button
+          type="button"
+          onClick={handleLogout}
+          className="ml-4 rounded-md border border-black/10 px-3 py-2 text-sm font-semibold text-brand-900 transition hover:bg-page"
+        >
+          Logout
+        </button>
       </div>
     </header>
   );
