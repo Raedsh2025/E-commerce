@@ -1,5 +1,6 @@
 # Furniture Dashboard Training — Tailwind CSS
 Helloooooooooooooooooooooooooooooooooo
+My Name is Rabit
 نسخة UI فقط للتدريب، وكل التنسيقات باستخدام Tailwind CSS v4.
 
 ## Stack
